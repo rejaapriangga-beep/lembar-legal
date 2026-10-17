@@ -1,6 +1,9 @@
 # lembar-legal
 
-Halaman publik untuk aplikasi Android **Lembar**, di-host lewat GitHub Pages.
-Kode aplikasinya ada di repo private terpisah.
+Situs publik **lembar.my.id** untuk aplikasi Lembar, di-host lewat GitHub Pages
+(domain diatur lewat file `CNAME`). Kode aplikasi Android ada di repo private terpisah.
 
-- Kebijakan privasi: https://rejaapriangga-beep.github.io/lembar-legal/privacy/
+- Beranda: https://lembar.my.id/
+- Kebijakan privasi: https://lembar.my.id/privacy/
+
+Nanti versi web Lembar juga disajikan dari situs ini.
