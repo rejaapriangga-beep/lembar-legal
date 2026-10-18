@@ -1,9 +1,14 @@
 # lembar-legal
 
-Situs publik **lembar.my.id** untuk aplikasi Lembar, di-host lewat GitHub Pages
-(domain diatur lewat file `CNAME`). Kode aplikasi Android ada di repo private terpisah.
+Isi situs statis **lembar.my.id** untuk aplikasi Lembar: beranda dan kebijakan privasi.
+Disajikan oleh Nginx di VPS pengembang dari clone repo ini di `/var/www/lembar`.
+Kode aplikasi Android ada di repo private terpisah.
 
 - Beranda: https://lembar.my.id/
 - Kebijakan privasi: https://lembar.my.id/privacy/
 
-Nanti versi web Lembar juga disajikan dari situs ini.
+Update situs setelah ada perubahan di repo ini:
+
+```bash
+cd /var/www/lembar && sudo git pull
+```
