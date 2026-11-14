@@ -6,6 +6,7 @@ Kode aplikasi Android ada di repo private terpisah.
 
 - Beranda: https://catetan.gampil.id/
 - Kebijakan privasi: https://catetan.gampil.id/privacy/
+- app-ads.txt (verifikasi AdMob): https://catetan.gampil.id/app-ads.txt
 
 Update situs setelah ada perubahan di repo ini:
 
