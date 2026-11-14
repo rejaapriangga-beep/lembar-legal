@@ -1,8 +1,8 @@
 // Service worker: aplikasi tetap bisa dibuka tanpa internet. Naikkan VERSION setiap kali
 // berkas aplikasi berubah supaya pengguna mendapat versi terbaru.
-const VERSION = 'lembar-web-1';
+const VERSION = 'lembar-web-2';
 const ASSETS = [
-  './', 'index.html', 'manifest.webmanifest', 'assets/app.css',
+  './', 'index.html', 'manifest.json', 'assets/app.css',
   'assets/js/app.js', 'assets/js/ui.js', 'assets/js/model.js', 'assets/js/db.js', 'assets/js/crypto.js',
   'assets/js/ink.js', 'assets/js/ads.js',
   'assets/fonts/jakarta.woff2', 'assets/fonts/bricolage.woff2', 'assets/fonts/caveat.woff2',

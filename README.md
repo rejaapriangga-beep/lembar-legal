@@ -11,7 +11,7 @@ Kode aplikasi Android ada di repo private terpisah.
 ## Lembar versi web
 
 HTML, CSS, dan JavaScript biasa tanpa langkah build (`index.html`, `assets/`, `sw.js`,
-`manifest.webmanifest`). Catatan disimpan di IndexedDB browser; tidak ada server atau akun.
+`manifest.json`). Catatan disimpan di IndexedDB browser; tidak ada server atau akun.
 Format cadangan `.lembar` (termasuk yang berpassword) sama dengan aplikasi Android.
 
 - Iklan AdSense: isi `ADSENSE_CLIENT` dan `ADSENSE_SLOT` di `assets/js/ads.js` setelah situs
