@@ -34,6 +34,7 @@ cd /var/www/lembar && sudo git pull
 server {
     listen 80;
     server_name catetan.gampil.id;
+    access_log off;   # alamat IP pengunjung tidak dicatat
     root /var/www/lembar;
     index index.html;
     location / { try_files $uri $uri/ =404; }
@@ -44,8 +45,13 @@ server {
 server {
     listen 80;
     server_name lembar.my.id www.lembar.my.id;
+    access_log off;
     return 301 https://catetan.gampil.id$request_uri;
 }
 ```
 
 HTTPS untuk kedua domain: `sudo certbot --nginx -d catetan.gampil.id -d lembar.my.id -d www.lembar.my.id`.
+
+Certbot menambahkan blok pengalihan http→https tanpa `access_log off`. Setelah certbot, tambahkan
+`access_log off;` di bawah setiap `server_name` yang belum memilikinya, lalu `sudo nginx -t && sudo systemctl reload nginx`.
+Cek: `sudo grep -c "access_log off" /etc/nginx/sites-available/lembar.my.id` harus sama dengan jumlah blok `server {`.
