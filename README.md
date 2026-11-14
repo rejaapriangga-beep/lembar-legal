@@ -16,7 +16,7 @@ cd /var/www/lembar && sudo git pull
 
 ## Konfigurasi Nginx
 
-`/etc/nginx/sites-available/lembar`:
+`/etc/nginx/sites-available/lembar.my.id`:
 
 ```nginx
 # Situs utama
@@ -43,4 +43,4 @@ HTTPS untuk kedua domain: `sudo certbot --nginx -d catetan.gampil.id -d lembar.m
 
 Certbot menambahkan blok pengalihan http→https tanpa `access_log off`. Setelah certbot, tambahkan
 `access_log off;` di bawah setiap `server_name` yang belum memilikinya, lalu `sudo nginx -t && sudo systemctl reload nginx`.
-Cek: `sudo grep -c "access_log off" /etc/nginx/sites-available/lembar` harus sama dengan jumlah blok `server {`.
+Cek: `sudo grep -c "access_log off" /etc/nginx/sites-available/lembar.my.id` harus sama dengan jumlah blok `server {`.
