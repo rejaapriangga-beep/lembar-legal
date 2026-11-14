@@ -1,21 +1,31 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lembar</title>
-  <style>
-    body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 48px 20px; color: #1B1A26; background: #FAF9F5; line-height: 1.65; }
-    h1 { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 2.4em; margin: 0 0 8px; }
-    a { color: #00A86B; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lembar: Catatan</title>
+  <meta name="description" content="Lembar: aplikasi catatan sederhana. Ketik catatan dan checklist, tanpa akun; semua catatan tersimpan di perangkatmu.">
+  <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#262624" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="preload" href="assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/app.css">
+  <script type="module" src="assets/js/app.js"></script>
 </head>
 <body>
-  <h1>Lembar</h1>
-  <p>Aplikasi catatan yang sederhana: ketik atau tulis tangan pakai pensil tablet. Tanpa akun, semua catatan tersimpan di perangkatmu.</p>
-  <p>Segera hadir di Google Play dan sebagai aplikasi web di sini.</p>
-  <ul>
-    <li><a href="privacy/">Kebijakan Privasi</a></li>
-  </ul>
+  <div id="app">
+    <section class="pane-list" aria-label="Daftar catatan"></section>
+    <section class="pane-editor" aria-label="Editor catatan"></section>
+    <div class="empty-editor">pilih catatan, atau mulai yang baru</div>
+  </div>
+  <div id="print" aria-hidden="true"></div>
+  <noscript>
+    <p style="padding:40px 20px;font-family:sans-serif">Lembar butuh JavaScript. Aktifkan JavaScript di browser, atau pakai
+    <a href="https://play.google.com/store/apps/details?id=id.my.lembar.app">Lembar untuk Android</a>.
+    <a href="privacy/">Kebijakan privasi</a>.</p>
+  </noscript>
 </body>
 </html>

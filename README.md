@@ -1,12 +1,23 @@
 # lembar-legal
 
-Isi situs statis **catetan.gampil.id** untuk aplikasi Lembar: beranda dan kebijakan privasi.
-Disajikan oleh Nginx di VPS pengembang dari clone repo ini di `/var/www/lembar`.
+Isi situs **catetan.gampil.id**: **Lembar versi web** (aplikasi catatan), kebijakan privasi, dan
+`app-ads.txt`. Disajikan Nginx di VPS pengembang dari clone repo ini di `/var/www/lembar`.
 Kode aplikasi Android ada di repo private terpisah.
 
-- Beranda: https://catetan.gampil.id/
+- Aplikasi web: https://catetan.gampil.id/
 - Kebijakan privasi: https://catetan.gampil.id/privacy/
 - app-ads.txt (verifikasi AdMob): https://catetan.gampil.id/app-ads.txt
+
+## Lembar versi web
+
+HTML, CSS, dan JavaScript biasa tanpa langkah build (`index.html`, `assets/`, `sw.js`,
+`manifest.webmanifest`). Catatan disimpan di IndexedDB browser; tidak ada server atau akun.
+Format cadangan `.lembar` (termasuk yang berpassword) sama dengan aplikasi Android.
+
+- Iklan AdSense: isi `ADSENSE_CLIENT` dan `ADSENSE_SLOT` di `assets/js/ads.js` setelah situs
+  disetujui AdSense. Selama kosong, tidak ada iklan yang dimuat.
+- Setiap mengubah berkas aplikasi, naikkan `VERSION` di `sw.js` supaya pengguna mendapat versi baru.
+- Coba lokal: `python3 -m http.server` lalu buka http://localhost:8000.
 
 Update situs setelah ada perubahan di repo ini:
 
@@ -16,7 +27,7 @@ cd /var/www/lembar && sudo git pull
 
 ## Konfigurasi Nginx
 
-`/etc/nginx/sites-available/lembar`:
+`/etc/nginx/sites-available/lembar.my.id`:
 
 ```nginx
 # Situs utama
